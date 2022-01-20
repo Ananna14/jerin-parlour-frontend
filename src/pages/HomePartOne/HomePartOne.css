@@ -1,0 +1,11 @@
+.img-width{
+    width: 484px;
+    height: 478px;
+    margin-left: 100px;
+}
+
+body{
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color:  #FFF8F5;
+}

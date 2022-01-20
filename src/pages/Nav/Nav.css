@@ -1,0 +1,12 @@
+.logo{
+    width: 127.45px;
+    height: 48px;
+}
+.text-nav{
+    text-decoration: none;
+    padding: 10px;
+    color: #F63E7B;
+}
+.text-nav:hover{
+    color: #F63E7B;
+}

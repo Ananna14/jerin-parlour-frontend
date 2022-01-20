@@ -1,0 +1,12 @@
+.text-center{
+    justify-content: center;
+    text-align: center;
+}
+.card-img-top{
+    width: 10%;
+    justify-content: center;
+}
+.testimonial-white{
+    background-color: white;
+    padding: 10px;
+}

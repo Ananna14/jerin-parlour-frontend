@@ -1,0 +1,21 @@
+/* body{
+    background-color: #E5E5E5;;
+} */
+.img-url{
+    margin-left: 10px;
+}
+.height-input{
+    height: 50px;
+}
+.border-color{
+    border: 1px solid #F63E7B;
+}
+.bg{
+    background-color: #F63E7B;
+    border-radius: 5px;
+    width: 229px;
+    height: 50px;
+    border: 1px solid #F63E7B;
+    color: white;
+}
+

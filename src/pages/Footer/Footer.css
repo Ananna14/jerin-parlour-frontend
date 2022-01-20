@@ -1,0 +1,12 @@
+.bg-color{
+    background-color: #F63E7B;
+    color: white;
+}
+.align-center{
+   
+    /* justify-content: center; */
+    margin: 0px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
