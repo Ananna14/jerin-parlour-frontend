@@ -1,0 +1,42 @@
+.iconTop{
+    width: 161.59px;
+    height: 60px;
+    left: 639px;
+    top: 172px;
+    margin-bottom: 50px;
+}
+.icon{
+    width: 31px;
+    height: 31.74px;
+}
+.btn-google{
+    border-radius: 57px;
+    background-color:#FFFFFF;
+    color: black;
+    /* padding-left: 20px; */
+    /* padding-bottom: 20px; */
+    /* width: 457px; */
+    /* height: 51px; */
+    border-radius: 57px;
+}
+.login-page{
+    background-color:#FFFFFF;;
+}
+/* .google-text{
+    width: 200px;
+    height: 20px;
+    left: 43.96%;
+    right: 42.15%;
+    top: 803px;
+    font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+} */
+.double-edit{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    padding: 20px;
+
+}

@@ -5,8 +5,26 @@
 .text-nav{
     text-decoration: none;
     padding: 10px;
-    color: #F63E7B;
+    color: black;
 }
 .text-nav:hover{
     color: #F63E7B;
+}
+.bg-log{
+ background-color: #F63E7B;
+color: white;
+width: 134px;
+height: 45px;
+left: 1171px;
+top: 52px;
+border-radius: 5px;
+}
+.bg-log:hover{
+ background-color: #F63E7B;
+color: white;
+width: 134px;
+height: 45px;
+left: 1171px;
+top: 52px;
+border-radius: 5px;
 }

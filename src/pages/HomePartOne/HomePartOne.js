@@ -13,7 +13,7 @@ const HomePartOne = () => {
                 <div className='d-flex p-5'>
                    {/* part-1 */}
                   <div className="row full-bg">
-                        <div className='mt-5 text-sm-start col-lg-6 col-12 text-design'>
+                        <div className='mt-5 ty col-lg-6 col-12 text-design'>
                             <h1 className='fw-bold text-design'>BEAUTY SALON<br/>FOR EVER WOMEN</h1><br/>
                             <p>A beauty parlour is a place where<br/>
                             people can go to have beauty treatments,<br/>

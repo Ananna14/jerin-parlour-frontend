@@ -1,12 +1,15 @@
-.text-center{
-    justify-content: center;
-    text-align: center;
+#feedback{
+    /* background-color: #0d0442; */
+    padding: 7% 10%;
+ 
 }
-.card-img-top{
-    width: 10%;
-    justify-content: center;
+.hr-style{
+    border: 5px dotted white;
+    border-bottom: none;
+    width: 50px;
 }
-.testimonial-white{
-    background-color: white;
-    padding: 10px;
+.feedback-img{
+    width: 120px;
+    height: auto;
 }
+
