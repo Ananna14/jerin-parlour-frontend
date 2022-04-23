@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import cover from '../../contact-icon/Contact us_topbanner_cropped.jpg'
+import Footer from '../Footer/Footer';
 import './Contact.css'
 
 const Contact = () => {
@@ -71,7 +72,7 @@ const Contact = () => {
             </>
      
       </div>
-
+        <Footer/>
         </div>
     )
 }

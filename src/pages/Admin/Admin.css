@@ -1,0 +1,24 @@
+.admin-part{
+    background-color: white;
+}
+:root{
+    --offcanvas-width: 270px;
+    --topNavbarHeight: 61px;
+}
+.sidebar-nav{
+    width: var(--offcanvas-width);
+}
+@media ( min-width: 992px ) {
+    .sidebar-nav{
+        transform: none;
+        visibility: visible !important;
+        top: var(--topNavbarHeight);
+        height: calc(100% - var( --topNavbarHeight));
+    }
+}
+main {
+    margin-left: var(--offcanvas-width);
+  }
+.offcanvas-sidebar-bg{
+background-color: #fff8f5;
+  }

@@ -15,7 +15,7 @@ const Testimonial = () => {
                 </div>
                 {/* -----------row------------- */}
                 <div className="row">
-                    <div className="col-lg-lg">
+                    <div className="col-lg-12">
                         {/* carousel */}
                         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">

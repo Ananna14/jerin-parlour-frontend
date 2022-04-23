@@ -36,7 +36,7 @@ function App() {
           <Route path ="/makeadmin" element={<MakeAdmin/>}></Route>
           <Route path ="*" element={<NotFound/>}></Route>
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
         </BrowserRouter>
       {/* </AuthProvider> */}
     </div>

@@ -32,7 +32,6 @@ const HomeThird = () => {
                         </div>
                     </div>
                 </div>
-              
          </div>
      </>
     )

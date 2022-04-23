@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useForm } from "react-hook-form";
+import Footer from '../Footer/Footer';
 import './AddService.css'
 
 const AddService = () => {
@@ -24,6 +25,7 @@ const AddService = () => {
                     <textarea {...register("Description")} placeholder='Description' className='mb-2 w-50 p-2 border-color' /><br/>
                     <input type="submit" className='border-color bg'/><br/>
                 </form>
+                <Footer/>
         </div>
     )
 }
