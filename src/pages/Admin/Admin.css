@@ -1,6 +1,3 @@
-.admin-part{
-    background-color: white;
-}
 :root{
     --offcanvas-width: 270px;
     --topNavbarHeight: 61px;
@@ -22,3 +19,15 @@ main {
 .offcanvas-sidebar-bg{
 background-color: #fff8f5;
   }
+/* offcanvas */
+.item{
+    text-decoration: none;
+    color: #F63E7B;
+}
+.bg-book{
+    background-color: #E5E5E5;
+    /* padding-bottom: 300px; */
+}
+.text-bg{
+    padding-bottom: 286px;
+}

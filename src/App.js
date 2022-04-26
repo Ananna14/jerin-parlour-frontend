@@ -14,6 +14,10 @@ import Register from './pages/Register/Register';
 import Admin from './pages/Admin/Admin';
 import MakeAdmin from './pages/MakeAdmin/MakeAdmin';
 import AuthProvider from './Contexts/AuthProvider/AuthProvider';
+import Book from './pages/Book/Book';
+import Booking from './pages/Booking/Booking';
+import Review from './pages/Review/Review';
+import OrderList from './pages/OrderList/OrderList';
 
 
 function App() {
@@ -28,12 +32,19 @@ function App() {
           {/* <Route path ="/" element={<Cards/>}></Route> */}
           <Route path ="/cards" element={<Cards/>}></Route>
           <Route path ="/details/:_id" element={<Details/>}></Route>
-          <Route path ="/addService" element={<AddService/>}></Route>
           <Route path ="/contact" element={<Contact/>}></Route>
           <Route path ="/login" element={<Login/>}></Route>
           <Route path ="/register" element={<Register/>}></Route>
           <Route path ="/admin" element={<Admin/>}></Route>
           <Route path ="/makeadmin" element={<MakeAdmin/>}></Route>
+          <Route path ={`/admin/admin/book`} element={<Book/>}></Route>
+          <Route path ={`/admin/admin/booking`} element={<Booking/>}></Route>
+          <Route path ={`/admin/admin/review`} element={<Review/>}></Route>
+          <Route path ={"/admin/admin/addService"} element={<AddService/>}></Route>
+          <Route path ={"/admin/admin/makeAdmin"} element={<MakeAdmin/>}></Route>
+          <Route path ={"/admin/admin/list"} element={<OrderList/>}></Route>
+       
+
           <Route path ="*" element={<NotFound/>}></Route>
         </Routes>
         {/* <Footer/> */}

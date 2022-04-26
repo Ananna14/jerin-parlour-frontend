@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useForm } from "react-hook-form";
+import Admin from '../Admin/Admin';
 import Footer from '../Footer/Footer';
 import './AddService.css'
 
@@ -17,15 +18,17 @@ const AddService = () => {
 
     return (
         <div>
-              <h2 className='text-center my-5 pink-color'>Add Service</h2>
-                <form onSubmit={handleSubmit(onSubmit)} className='mt-5 mb-2 '>
+            <Admin/>
+             <main class="bg-book">
+             <h2 className='pink-color p-3'>Add Service</h2>
+                <form onSubmit={handleSubmit(onSubmit)} className='mt-5 mb-2 text-bg'>
                     <input {...register("Title")} placeholder='Enter Title' className='mb-2 w-50 p-2 border-color'  /><br/>
                     <input {...register("img")} placeholder='img-url' className='mb-2 w-50 p-2 border-color'  /><br/>
                     <input {...register("price")} placeholder='price' className='mb-2 w-50 p-2 border-color'  /><br/>
                     <textarea {...register("Description")} placeholder='Description' className='mb-2 w-50 p-2 border-color' /><br/>
                     <input type="submit" className='border-color bg'/><br/>
                 </form>
-                <Footer/>
+             </main>
         </div>
     )
 }

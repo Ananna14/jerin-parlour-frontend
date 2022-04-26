@@ -32,7 +32,7 @@ const Nav = () => {
                     <Link class='text-nav' to="/cards">Cards</Link>
                     </li>
                     <li class="nav-item">
-                    <Link class='text-nav' to="/addService">Add Service</Link>
+                    {/* <Link class='text-nav' to="/addService">Add Service</Link> */}
                     </li>
                     <li class="nav-item">
                     <Link class='text-nav' to="/contact">Contact Us</Link>
