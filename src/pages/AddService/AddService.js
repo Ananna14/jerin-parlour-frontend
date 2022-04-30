@@ -26,7 +26,7 @@ const AddService = () => {
                     <input {...register("img")} placeholder='img-url' className='mb-2 w-50 p-2 border-color'  /><br/>
                     <input {...register("price")} placeholder='price' className='mb-2 w-50 p-2 border-color'  /><br/>
                     <textarea {...register("Description")} placeholder='Description' className='mb-2 w-50 p-2 border-color' /><br/>
-                    <input type="submit" className='border-color bg'/><br/>
+                    <input type="submit" value="Submit" className='btn-color'/> 
                 </form>
              </main>
         </div>

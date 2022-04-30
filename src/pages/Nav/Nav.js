@@ -9,12 +9,12 @@ const Nav = () => {
   // const {user} = useAuth();
     return (
  <div>
-     <nav className="navbar navbar-expand-lg navbar-light full-bg my-lg-0">
+     <nav className="navbar navbar-expand-lg navbar-light full-bg my-lg-0 dashbord">
         <div className="container-fluid col-12">
           <div className="">
             <a className="navbar-brand" href="#">
               {/* Navbsr-trigger */}
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span className="navbar-toggler-icon"></span></button>
+              {/* <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span className="navbar-toggler-icon bar"></span></button> */}
               {/* Navbsr-trigger */}
               <img src={logo} alt="" width="150" height="50" />
             </a>

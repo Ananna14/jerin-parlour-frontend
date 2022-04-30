@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       {/* <AuthProvider> */}
         <BrowserRouter>
-        <Nav></Nav>
+        {/* <Nav></Nav> */}
         <Routes>
           <Route path="/" element={<HomePartOne/>}></Route>
           <Route path="/home" element={<HomePartOne/>}></Route>

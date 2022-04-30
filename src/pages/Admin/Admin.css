@@ -13,21 +13,24 @@
         height: calc(100% - var( --topNavbarHeight));
     }
 }
-main {
-    margin-left: var(--offcanvas-width);
-  }
 .offcanvas-sidebar-bg{
-background-color: #fff8f5;
+background-color: #FFFFFF;
   }
-/* offcanvas */
+/* offcanvas-sidebar-text-color-start */
 .item{
     text-decoration: none;
-    color: #F63E7B;
+    color: #878787;;
 }
+.item:hover{
+    color: #F63E7B
+}
+/* offcanvas-sidebar-text-color-end */
 .bg-book{
-    background-color: #E5E5E5;
-    /* padding-bottom: 300px; */
+    background-color: #F4F7FC;
 }
 .text-bg{
     padding-bottom: 286px;
+}
+.dashbord-text{
+    margin-left: 100px;
 }

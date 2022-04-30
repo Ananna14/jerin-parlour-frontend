@@ -1,5 +1,6 @@
 import React from 'react';
 import { FloatingLabel, Form } from 'react-bootstrap';
+import Footer from '../Footer/Footer';
 
 const HomeForm = () => {
   return <div>
@@ -51,7 +52,7 @@ const HomeForm = () => {
                 </div>
               </div>
             </div>
-     
+     <Footer/>
   </div>;
 };
 

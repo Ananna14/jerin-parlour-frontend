@@ -1,15 +1,16 @@
 import React from 'react'
 import girl from '../../Image_Icon/Image/beautiful-young-asian-woman-touching-her-clean-face-with-fresh-healthy-skin-isolated-white-wall-beauty-cosmetics-facial-treatment-concept 1.png'
 import Cards from '../Cards/Cards'
-import Footer from '../Footer/Footer'
 import HomeForm from '../HomeForm/HomeForm'
 import HomeThird from '../HomeThird/HomeThird'
+import Nav from '../Nav/Nav'
 import Testimonial from '../Testimonial/Testimonial'
 import './HomePartOne.css'
 
 const HomePartOne = () => {
     return (
          <>
+         <Nav/>
             <div className="container">
                 <div className='d-flex p-5'>
                    {/* part-1 */}
@@ -32,7 +33,6 @@ const HomePartOne = () => {
                <HomeThird/>
                <Testimonial/>
                <HomeForm/>
-               <Footer/>
          </>
                
     )

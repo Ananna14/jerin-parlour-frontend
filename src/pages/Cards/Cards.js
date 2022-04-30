@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Row } from 'react-bootstrap'
-import Footer from '../Footer/Footer'
 import SingleCard from '../SingleCard/SingleCard'
 import './Cards.css'
 
@@ -28,7 +27,6 @@ const Cards = () => {
             }
         </div>
         <button type="submit" className='btn'>Explore more</button>
-        <Footer/>
      </div>
     )
 }
