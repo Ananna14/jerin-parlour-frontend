@@ -24,10 +24,15 @@ const useFirebase = () =>{
     .finally(() => setIsLoading(false));
   }
 
-const loginUser = (email, password)=>{
+  // redirect-location-history
+const loginUser = (email, password, location, navigate)=>{
   setIsLoading(true);
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
+      // redirect-location-history-start
+      const destination = location?.state?.from || '/admin/admin/book';
+      navigate(destination);
+        // redirect-location-history-end
     setAuthError('');
   })
   .catch((error) => {

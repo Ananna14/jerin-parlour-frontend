@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import SingleCard from '../SingleCard/SingleCard'
 import './Cards.css'
@@ -28,7 +29,7 @@ const Cards = () => {
                 </Row>
             }
         </div>
-        <button type="submit" className='btn'>Explore more</button>
+        <Link to="/cards"><button type="submit" className='btn'>Explore more</button></Link>
      </div>
     )
 }

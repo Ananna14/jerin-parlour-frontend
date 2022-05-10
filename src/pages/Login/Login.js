@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import icon from '../../Image_Icon/Icon/Group 573.png'
 import iconTop from '../../Image_Icon/Group 33092.png'
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
   const {user, loginUser, isLoading, authError} = useAuth();
+
+  // redirect
+  const location = useLocation();
+  const navigate = useNavigate();
 
   //1.
   const handleOnChange = e =>{
@@ -23,7 +27,8 @@ const Login = () => {
 
   //2.
   const handleLoginSubmit = e =>{
-    loginUser(loginData.email, loginData.password);
+    // redirect-location-history
+    loginUser(loginData.email, loginData.password, location, navigate);
    e.preventDefault();
   }
   return <div className='login-page'>
