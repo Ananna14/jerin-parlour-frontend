@@ -37,13 +37,13 @@ function App() {
           <Route path ="/login" element={<Login/>}></Route>
           <Route path ="/register" element={<Register/>}></Route>
           <Route path ="/admin" element={<PrivateRoute><Admin/></PrivateRoute>}></Route>
-          <Route path ="/makeadmin" element={<MakeAdmin/>}></Route>
-          <Route path ={`/admin/admin/book`} element={<Book/>}></Route>
-          <Route path ={`/admin/admin/booking`} element={<Booking/>}></Route>
-          <Route path ={`/admin/admin/review`} element={<Review/>}></Route>
-          <Route path ={"/admin/admin/addService"} element={<AddService/>}></Route>
-          <Route path ={"/admin/admin/makeAdmin"} element={<MakeAdmin/>}></Route>
-          <Route path ={"/admin/admin/list"} element={<OrderList/>}></Route>
+          <Route path ="/makeadmin" element={<PrivateRoute><MakeAdmin/></PrivateRoute>}></Route>
+          <Route path ={`/admin/admin/book`} element={<PrivateRoute><Book/></PrivateRoute>}></Route>
+          <Route path ={`/admin/admin/booking`} element={<PrivateRoute><Booking/></PrivateRoute>}></Route>
+          <Route path ={`/admin/admin/review`} element={<PrivateRoute><Review/></PrivateRoute>}></Route>
+          <Route path ={"/admin/admin/addService"} element={<PrivateRoute><AddService/></PrivateRoute>}></Route>
+          <Route path ={"/admin/admin/makeAdmin"} element={<PrivateRoute><MakeAdmin/></PrivateRoute>}></Route>
+          <Route path ={"/admin/admin/list"} element={<PrivateRoute><OrderList/></PrivateRoute>}></Route>
        
 
           <Route path ="*" element={<NotFound/>}></Route>
