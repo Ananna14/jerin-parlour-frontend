@@ -6,16 +6,13 @@ import useAuth from '../../hooks/useAuth';
 
 
 const Nav = () => {
-  // const {user} = useAuth();
+  const {user, logOut} = useAuth();
     return (
  <div>
      <nav className="navbar navbar-expand-lg navbar-light full-bg my-lg-0 dashbord">
         <div className="container-fluid col-12">
           <div className="">
             <a className="navbar-brand" href="#">
-              {/* Navbsr-trigger */}
-              {/* <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span className="navbar-toggler-icon bar"></span></button> */}
-              {/* Navbsr-trigger */}
               <img src={logo} alt="" width="150" height="50" />
             </a>
           </div>
@@ -25,24 +22,29 @@ const Nav = () => {
           </button>
           <div className="collapse navbar-collapse nav-design" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 card-design">
-                    <li class="nav-item">
-                    <Link class='text-nav' to="/home">Home</Link>
+                    <li className="nav-item">
+                    <Link className='text-nav' to="/home">Home</Link>
                     </li>
-                    <li class="nav-item">
-                    <Link class='text-nav' to="/cards">Cards</Link>
+                    <li className="nav-item">
+                    <Link className='text-nav' to="/cards">Cards</Link>
                     </li>
-                    <li class="nav-item">
-                    {/* <Link class='text-nav' to="/addService">Add Service</Link> */}
-                    </li>
-                    <li class="nav-item">
-                    <Link class='text-nav' to="/contact">Contact Us</Link>
+                    <li className="nav-item">
+                    <Link className='text-nav' to="/contact">Contact Us</Link>
                     </li><br/>
-                    <li class="nav-item">
-                    <Link class='text-nav' to="/admin">Admin</Link>
+                    <li className="nav-item">
+                    <Link className='text-nav' to="/admin/admin/book">Admin</Link>
                     </li><br/>
-                    <li class="nav-item">
-                     <Link class='text-nav bg-log' to="/login">Login</Link>
+                     {
+                       user?.email ? 
+                     
+                    //  <Link>LogOut</Link>
+                    <button onClick={logOut} className='text-nav bg-log'>LogOut</button>
+              
+                       :
+                       <li className="nav-item">
+                     <Link className='text-nav bg-log' to="/login">Login</Link>
                      </li>
+                     }
                      
                    {/* {
                      user?.email ?

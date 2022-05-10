@@ -22,7 +22,7 @@ const Booking = () => {
         <div>
             <Admin/>
            <main>
-           <h2 class="bg-book fw-bold p-3 text-start">Service List</h2>
+           <h2 className="bg-book fw-bold p-3 text-start">Service List</h2>
            </main>
     
 

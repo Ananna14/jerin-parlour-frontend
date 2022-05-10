@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Row } from 'react-bootstrap'
+import Nav from '../Nav/Nav'
 import SingleCard from '../SingleCard/SingleCard'
 import './Cards.css'
 
@@ -13,8 +14,9 @@ const Cards = () => {
     },[])
     return (
      <div className='bg-card'>
+         {/* <Nav/> */}
         <div>
-              <h2 className='p-5'>Our Awesome <span className="pink-color">Services</span></h2>
+              <h2 className='p-5'>Our Awesome<span className="pink-color">Services</span></h2>
             {
                 <Row xs={1} md={2} className="g-4">
                     {

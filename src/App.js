@@ -13,29 +13,30 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Admin from './pages/Admin/Admin';
 import MakeAdmin from './pages/MakeAdmin/MakeAdmin';
-import AuthProvider from './Contexts/AuthProvider/AuthProvider';
 import Book from './pages/Book/Book';
 import Booking from './pages/Booking/Booking';
 import Review from './pages/Review/Review';
 import OrderList from './pages/OrderList/OrderList';
+import AuthProvider from './Contexts/AuthProvider/AuthProvider';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 
 
 function App() {
   return (
     <div className="App">
-      {/* <AuthProvider> */}
+      <AuthProvider>
         <BrowserRouter>
         {/* <Nav></Nav> */}
         <Routes>
+        {/* <Route path="/" element={<App />}> */}
           <Route path="/" element={<HomePartOne/>}></Route>
           <Route path="/home" element={<HomePartOne/>}></Route>
-          {/* <Route path ="/" element={<Cards/>}></Route> */}
           <Route path ="/cards" element={<Cards/>}></Route>
           <Route path ="/details/:_id" element={<Details/>}></Route>
           <Route path ="/contact" element={<Contact/>}></Route>
           <Route path ="/login" element={<Login/>}></Route>
           <Route path ="/register" element={<Register/>}></Route>
-          <Route path ="/admin" element={<Admin/>}></Route>
+          <Route path ="/admin" element={<PrivateRoute><Admin/></PrivateRoute>}></Route>
           <Route path ="/makeadmin" element={<MakeAdmin/>}></Route>
           <Route path ={`/admin/admin/book`} element={<Book/>}></Route>
           <Route path ={`/admin/admin/booking`} element={<Booking/>}></Route>
@@ -49,7 +50,7 @@ function App() {
         </Routes>
         {/* <Footer/> */}
         </BrowserRouter>
-      {/* </AuthProvider> */}
+      </AuthProvider>
     </div>
   );
 }

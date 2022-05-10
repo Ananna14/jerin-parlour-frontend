@@ -3,12 +3,14 @@ import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import cover from '../../contact-icon/Contact us_topbanner_cropped.jpg'
 import Footer from '../Footer/Footer';
+import Nav from '../Nav/Nav';
 import './Contact.css'
 
 const Contact = () => {
    
     return (
         <div className='bg-light'>
+            <Nav/>
                 <img src={cover} className="img-fluid" alt="" />
                 <h2 className='text-center my-5'>Contact Us</h2>
             {/* contact-detail-start */}

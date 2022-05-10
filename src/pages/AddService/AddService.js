@@ -19,7 +19,7 @@ const AddService = () => {
     return (
         <div>
             <Admin/>
-             <main class="bg-book">
+             <main className="bg-book">
              <h2 className='pink-color p-3'>Add Service</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className='mt-5 mb-2 text-bg'>
                     <input {...register("Title")} placeholder='Enter Title' className='mb-2 w-50 p-2 border-color'  /><br/>

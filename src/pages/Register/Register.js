@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 import icon from '../../Image_Icon/Icon/Group 573.png'
 import { useState } from 'react';
 import './Register.css'
+import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
+   
+
+    const { user, registerUser, isLoading, authError } = useAuth()
 
     const handleOnChange = e =>{
         const field = e.target.name;
@@ -18,13 +22,16 @@ const Register = () => {
         setLoginData(newLoginData)
     }
     const handleOnSubmit = e =>{
-        alert('Register successfully');
-    //   if(loginData.password !== loginData.confirm-password){
-    //       alert('your password did not match')
-    //       return;
-    //   }
+        // alert('Register successfully');
+      if(loginData.password !== loginData.password2){
+          alert('your password did not match')
+          return;
+      }
+    //   registerUser(loginData.email, loginData.passward);
+    registerUser(loginData.email, loginData.password );
         e.preventDefault();
     }
+    
   return <div className='register-design'>
                  {/* form */}
               <div className="container contact-form mt-5">
@@ -44,11 +51,20 @@ const Register = () => {
                                 <input type="password" class="form-control" name="password" onChange={handleOnChange} id="inputPassword2" placeholder="Password"/>
                             </div>
                             <div class="col-auto mb-3">
-                                <input type="confirm-password" class="form-control" name="confirm-password" onChange={handleOnChange} id="inputPassword2" placeholder="Confirm-Password"/>
+                                <input type="confirm-password" class="form-control" name="password2" onChange={handleOnChange} id="inputPassword2" placeholder="Confirm-Password"/>
                             </div>
                            
                               <button type="submit" className='bg p-2 px-3 mb-5'>Create an account</button>
                          </form>
+                         {isLoading && <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                        </div>}
+                         {user?.email && <div class="alert alert-success" role="alert">
+                           User Created Successfully!
+                            </div>}
+                            {authError && <div class="alert alert-danger" role="alert">
+                            {authError}
+                            </div>}
                         <h6>Already have an account? <Link to="/login" className="pink-color">Login</Link></h6>               
                     </div>
                    {/* OR */}

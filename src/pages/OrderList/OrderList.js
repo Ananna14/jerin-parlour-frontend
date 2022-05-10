@@ -5,7 +5,7 @@ const OrderList = () => {
   return (
     <div>
         <Admin/>
-        <main class="bg-book">
+        <main className="bg-book">
         <h3>Order list</h3>
         </main>
     </div>
