@@ -1,5 +1,4 @@
-import React from 'react'
-// import girl from '../../Image_Icon/Image/beautiful-young-asian-woman-touching-her-clean-face-with-fresh-healthy-skin-isolated-white-wall-beauty-cosmetics-facial-treatment-concept 1.png'
+import useAuth from '../../hooks/useAuth'
 import girl from '../../Image_Icon/Image/beautiful-young-asian-woman-touching-her-clean-face-with-fresh-healthy-skin-isolated-white-wall-beauty-cosmetics-facial-treatment-concept 1.png'
 import Cards from '../Cards/Cards'
 import HomeForm from '../HomeForm/HomeForm'
@@ -9,6 +8,7 @@ import Testimonial from '../Testimonial/Testimonial'
 import './HomePartOne.css'
 
 const HomePartOne = () => {
+    const { isLoading } = useAuth();
     return (
          <>
          <Nav/>
@@ -34,6 +34,9 @@ const HomePartOne = () => {
                <HomeThird/>
                <Testimonial/>
                <HomeForm/>
+               {isLoading && <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                        </div>}
          </>
                
     )

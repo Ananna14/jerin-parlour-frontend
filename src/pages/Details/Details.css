@@ -1,0 +1,20 @@
+
+.card-center{
+    justify-content: center;
+    text-align: center;
+}
+.back-btn{
+    border: 1px solid #F63E7B;
+    background-color: white;
+    color: #F63E7B;
+    width: 100px;
+}
+.buy-btn{
+    border: 1px solid #F63E7B;
+    background-color: #F63E7B;
+    border-radius: 5px;
+    padding: 5px;
+    padding-bottom: 5px;
+    color: white;
+    width: 100px;
+}
