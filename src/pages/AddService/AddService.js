@@ -6,11 +6,13 @@ import Footer from '../Footer/Footer';
 import './AddService.css'
 
 const AddService = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
         axios.post('http://localhost:5000/services', data)
         .then(res =>{
+            reset();
+            alert('Successfully Submit');
             console.log(res)
         })
       

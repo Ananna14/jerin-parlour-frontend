@@ -32,7 +32,7 @@ const Nav = () => {
                     <Link className='text-nav' to="/contact">Contact Us</Link>
                     </li><br/>
                     <li className="nav-item">
-                    <Link className='text-nav' to="/admin/admin/book">Admin</Link>
+                    <Link className='text-nav' to="/admin/admin/book">Dashboard</Link>
                     </li><br/>
                      {
                        user?.email ? 

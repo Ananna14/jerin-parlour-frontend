@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { useForm } from "react-hook-form";
 import { Card } from 'react-bootstrap';
 import '../Details/Details.css'
+import axios from 'axios';
+import useAuth from '../../hooks/useAuth';
 
 const Details = () => {
     // const { register, handleSubmit } = useForm();
     const {_id} = useParams();
     const [details, setDetails] = useState({});
+    const { user } = useAuth();
+    // const [bookingInfo, setBookingInfo] = useState({});
 
     useEffect(()=>{
         fetch(`http://localhost:5000/services/${_id}`)
@@ -15,11 +18,37 @@ const Details = () => {
         .then(data =>setDetails(data))
     }, [])
 
-    const onSubmit = data => {
-        // console.log(data)
-       alert('Order Successful');
-      return;
+    
+    const onSubmit = (_id) => {
+        const orderDetails = {
+            orderId: _id,
+            name: user.displayName,
+            email: user.email,
+            status: 'Pending',
+            serviceName: details.Title,
+            Description: details.Description,
+            price: details.price
+        }
+        console.log(orderDetails);
+        // SEND_TO_THE_SERVER
+        fetch(`http://localhost:5000/booking`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orderDetails)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    alert('Order Successful');
+                    // history.push('/products');
+                }
+            });
+      
     };
+
     return (
         <div>
             <>
@@ -35,12 +64,16 @@ const Details = () => {
                             <Card.Text>
                                 {details.Description}
                             </Card.Text>
-                            <button onChange= {onSubmit} className='buy-btn'>BUY NOW</button>
+                            <button  onClick={() => onSubmit(details._id)} className='buy-btn'>BUY NOW</button>
                             </Card.Body>
                             
                         </Card>
                        <Link to="/home"><button className="back-btn">Back</button></Link>
                     {/* </Link> */}
+                </div>
+                {/* form-add */}
+                <div>
+
                 </div>
             </>
         </div>

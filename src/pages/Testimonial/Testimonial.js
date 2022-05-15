@@ -4,16 +4,18 @@ import girl from '../../Image_Icon/Image/Ellipse 90.png'
 import girl2 from '../../Image_Icon/Image/Ellipse 91.png'
 import girl3 from '../../Image_Icon/Image/Ellipse 92.png'
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 
 const Testimonial = () => {
-    const { reviews, setReviews } = useState([]);
+    // const {_id} = useParams();
+    const { reviews, setReviews } = useState({});
     // const {firstName, Description} = review;
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch(`http://localhost:5000/review`)
         .then(res => res.json())
-        .then( data => console.log(data))
+        .then( data => setReviews(data))
             // .then(res => setReviews(res.data))
             // .catch(err => console.log(err))
     }, []);

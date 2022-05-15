@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile } from "firebase/auth";
 import { app } from '../pages/Login/Firebase/firebase.config';
 
 
@@ -16,6 +16,7 @@ const useFirebase = () =>{
      createUserWithEmailAndPassword(auth, email, password)
      .then((userCredential) => {
       setAuthError('');
+
     })
     .catch((error) => {
       setAuthError(error.message);
@@ -24,6 +25,7 @@ const useFirebase = () =>{
     .finally(() => setIsLoading(false));
   }
 
+  
   // redirect-location-history
 const loginUser = (email, password, location, navigate)=>{
   setIsLoading(true);
