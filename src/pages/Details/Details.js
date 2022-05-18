@@ -24,6 +24,7 @@ const Details = () => {
             orderId: _id,
             name: user.displayName,
             email: user.email,
+            img: details.img,
             status: 'Pending',
             serviceName: details.Title,
             Description: details.Description,

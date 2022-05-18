@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Nav from '../Nav/Nav'
 import SingleCard from '../SingleCard/SingleCard'
 import './Cards.css'
 
