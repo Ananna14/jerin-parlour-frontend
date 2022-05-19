@@ -15,7 +15,7 @@ const Admin = () => {
     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling">
       <span className="navbar-toggler-icon"></span>
     </button>
-    {/* <button className="btn-off dashbord" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span classNameName="navbar-toggler-icon bg-dark"></span> Dashbord</button> */}
+
     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
     </div>
   </div>
@@ -24,10 +24,6 @@ const Admin = () => {
 
 {/* -------------------------offcanvas-start------------------- */}
                     <div classNameName="bg-book">
-
-                 
-                    {/* <button style={{ width: '111%' }} className="btn mt-0 btn-off" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span classNameName="navbar-toggler-icon bar bg-dark"></span>Enable body scrolling</button> */}
-
                     <div className="offcanvas offcanvas-start sidebar-nav offcanvas-sidebar-bg" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                   
                       
@@ -35,11 +31,11 @@ const Admin = () => {
                      
                             <div className="text-start mt-5">
                               <Link className="item lh-lg" to={`/home`}><i className="fa-solid fa-house-chimney px-3"></i>Home</Link><br/>
-                              <Link className="item lh-lg" to={`/admin/admin/book`}><i className="fa-solid fa-address-book px-3"></i>Book</Link><br/>
-                              <Link className="item lh-lg" to={`/admin/admin/booking`}><i className="fa-solid fa-address-book px-3"></i>Booking list</Link><br/>
+                              {/* <Link className="item lh-lg" to={`/admin/admin/book`}><i className="fa-solid fa-address-book px-3"></i>Book</Link><br/>
+                              <Link className="item lh-lg" to={`/admin/admin/booking`}><i className="fa-solid fa-address-book px-3"></i>Booking list</Link><br/> */}
                               <Link className="item lh-lg" to={`/admin/admin/review`}><i className="fa-solid fa-magnifying-glass px-3"></i>Review</Link><br/>
                               <Link className="item lh-lg" to={`/admin/admin/addService`}><i className="fa-solid fa-plus px-3"></i>Add Service</Link><br/>
-                              <Link className="item lh-lg" to={`/admin/admin/makeAdmin`}><i className="fa-solid fa-users-line px-3"></i>Make Admin</Link><br/>
+                              {/* <Link className="item lh-lg" to={`/admin/admin/makeAdmin`}><i className="fa-solid fa-users-line px-3"></i>Make Admin</Link><br/> */}
                               <Link className="item lh-lg" to={`/admin/admin/list`}><i className="fa-regular fa-camera-retro px-3"></i>Order list</Link><br/>
                             </div>
                       </div>

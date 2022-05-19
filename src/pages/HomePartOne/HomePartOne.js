@@ -11,6 +11,9 @@ const HomePartOne = () => {
     const { isLoading } = useAuth();
     return (
          <>
+          {isLoading && <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                        </div>}
          <Nav/>
             <div className="container">
                 <div className='d-flex p-5'>
@@ -34,9 +37,6 @@ const HomePartOne = () => {
                <HomeThird/>
                <Testimonial/>
                <HomeForm/>
-               {isLoading && <div class="spinner-border text-danger" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                        </div>}
          </>
                
     )

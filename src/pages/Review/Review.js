@@ -13,7 +13,7 @@ const Review = () => {
           // console.log(res);
           if(res.data.insertedId) {
             alert('added successfully');
-            reset('');
+            reset();
           }
         })
     };
