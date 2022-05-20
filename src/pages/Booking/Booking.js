@@ -43,37 +43,32 @@ const handleDelete = id =>{
            <main>
            <h2 className="bg-book fw-bold p-3 text-start">Service List</h2>
            <h2>{bookings.length}</h2>
-           {/* <h2>{bookings.Title}</h2> */}
-           
-              {
+           <div className="col-lg-4 col-md-6 col-12">
+           {
                   bookings.map(booking => <div key={booking._id}  bookings={bookings} >
                      <>
-                     <i className='fw-bold btn-Success'>{booking.email}</i><br/>
-                <div className="row">
-                <div className='col-lg-4 col-12'>
-                    
-                    <Card className='shadow m-4 h-100'>
-                    
-                        <Card.Img variant="top" className='card-img mt-5' src={booking.img} />
-                        <Card.Body>
-                      
-                        <Card.Title className="fw-bold">{booking.serviceName}</Card.Title>
-                        <Card.Text className="fw-bold">
-                            {booking.price}
-                        </Card.Text>
-                        <Card.Text>
-                            {booking.Description}
-                        </Card.Text>
-                        <button onClick={() => handleDelete(booking._id)}>Delete</button>
-                        </Card.Body>
-                      
-                    </Card>
-      
-            </div>
-                </div>
-             </>
+                     <i className='fw-bold pink-color'>{booking.email}</i><br/>
+                        <Card className='shadow m-4 h-100 margin-card'>
+                        
+                            <Card.Img variant="top" className='card-img mt-5' src={booking.img} />
+                            <Card.Body>
+                        
+                            <Card.Title className="fw-bold">{booking.serviceName}</Card.Title>
+                            <Card.Text className="fw-bold">
+                                {booking.price}
+                            </Card.Text>
+                            <Card.Text>
+                                {booking.Description}
+                            </Card.Text><br/><br/>
+                            <p className="status-colors">{booking.status}</p>
+                            <button className="btn" onClick={() => handleDelete(booking._id)}>Delete</button>
+                            </Card.Body>
+                        
+                        </Card>
+               </>
                   </div>)
-              }
+}
+           </div>
            </main>
     
 

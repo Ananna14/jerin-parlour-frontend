@@ -54,7 +54,6 @@ const Details = () => {
         <div>
             <>
                 <div className='col-lg-4 col-md-6 col-12' >
-                    {/* <Link to={`/details/${_id}`} style={{color:"black", textDecoration:"none"}}> */}
                         <Card className='shadow m-4 h-100 mt-5 card-center'>
                             <Card.Img variant="top" className='card-img mt-5' src={details.img} />
                             <Card.Body>
@@ -70,7 +69,6 @@ const Details = () => {
                             
                         </Card>
                        <Link to="/home"><button className="back-btn">Back</button></Link>
-                    {/* </Link> */}
                 </div>
                 {/* form-add */}
                 <div>

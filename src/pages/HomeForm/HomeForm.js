@@ -3,9 +3,8 @@ import { FloatingLabel, Form } from 'react-bootstrap';
 import Footer from '../Footer/Footer';
 
 const HomeForm = () => {
-  return <div>
-           <div className="full-bg">
-               <h2 className="my-5 fw-bold">Let us handle your<br/> project, professionally.</h2>
+  return <div className="full-bg">
+               <h2 className="mt-5 fw-bold">Let us handle your<br/> project, professionally.</h2>
               <div className="container mt-5">
                        <div className="row">
                           <div className="col col-lg-6 col-12">
@@ -48,9 +47,8 @@ const HomeForm = () => {
                             </FloatingLabel>
                             <button type="submit" className='bg p-2 px-3 mb-5'>Send Message</button>
                         </div>
-                    
                 </div>
-              </div>
+
             </div>
      <Footer/>
   </div>;

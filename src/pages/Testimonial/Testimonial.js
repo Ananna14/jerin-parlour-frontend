@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Card, Col } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
+import './Testmonial.css'
 
 const Testimonial = () => {
   const [reviews, setReviews]  = useState([]);
@@ -55,25 +56,25 @@ const Testimonial = () => {
    
   };
   return (
-    <div>
-      <div className="responsive">
-        <h2> Tastmonial </h2>
-        <Slider {...settings}>
-      {
-        reviews.map(review => <div review={review} key={review._id}>
-                            <Card className='shadow m-4 h-100'>
-                            <Card.Img variant="top" className='card-img mt-5' src={review.img} />
-                            <Card.Body>
-                            <Card.Title className="fw-bold">{review.firstName}</Card.Title>
-                            <Card.Text className="fw-bold">
-                                {review.Description}
-                            </Card.Text>
-                            </Card.Body>
-                        </Card>
-        </div>)
-      }
-        </Slider>
-      </div>
+    <div className='bg-card'>
+      <div className="container">
+          <h2 className='p-5'> Tastimonial </h2>
+          <Slider {...settings}>
+            {
+              reviews.map(review => <div review={review} key={review._id}>
+                                  <Card className='shadow m-4 h-100 mb-5'>
+                                  <Card.Img variant="top" className='card-img mb-5' src={review.img} />
+                                  <Card.Body>
+                                  <Card.Title className="fw-bold">{review.firstName}</Card.Title>
+                                  <Card.Text className="fw-bold">
+                                      {review.Description}
+                                  </Card.Text>
+                                  </Card.Body>
+                              </Card>
+              </div>)
+            }
+          </Slider>
+     </div>
     </div>
   )
 }

@@ -1,6 +1,9 @@
 main {
     margin-left: var(--offcanvas-width);
   }
+  .status-colors{
+    color: rgb(156, 39, 176);
+  }
   /* mobile-device-responsive  */
 @media only screen and (max-width:688px){
   main{
