@@ -8,7 +8,7 @@ const Review = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://morning-lowlands-93777.herokuapp.com/review', data)
         .then(res => {
           // console.log(res);
           if(res.data.insertedId) {
@@ -24,7 +24,6 @@ const Review = () => {
         <h2>Review</h2>
             <form class="text-center text-bg col-12" onSubmit={handleSubmit(onSubmit)}>
         <input className='mb-2 w-50 p-2 border-color' placeholder='Your name' {...register("firstName")} /><br/><br/>
-        {/* <input className='mb-2 w-50 p-2 border-color' placeholder='Companys name Designation' {...register("lastName")} /><br/><br/> */}
         <textarea {...register("Description")} placeholder='Description' className='mb-2 w-50 p-2 border-color' /><br/>
         <input type="submit" value="Submit" className='btn-color'/> 
         </form>

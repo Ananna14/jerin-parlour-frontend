@@ -32,7 +32,7 @@ const loginUser = (email, password, location, navigate)=>{
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
       // redirect-location-history-start
-      const destination = location?.state?.from || '/admin/admin/book';
+      const destination = location?.state?.from || '/admin/admin/review';
       navigate(destination);
         // redirect-location-history-end
     setAuthError('');

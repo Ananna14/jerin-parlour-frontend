@@ -16,7 +16,6 @@ const Nav = () => {
               <img src={logo} alt="" width="150" height="50" />
             </a>
           </div>
-          {/* <a class="navbar-brand" href="#">Navbar</a> */}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -25,19 +24,14 @@ const Nav = () => {
                     <li className="nav-item">
                     <Link className='text-nav' to="/home">Home</Link>
                     </li>
-                    {/* <li className="nav-item">
-                    <Link className='text-nav' to="/cards">Cards</Link>
-                    </li> */}
                     <li className="nav-item">
                     <Link className='text-nav' to="/contact">Contact Us</Link>
                     </li><br/>
                     <li className="nav-item">
-                    <Link className='text-nav' to="/admin/admin/booking">Dashboard</Link>
+                    <Link className='text-nav' to="/admin/admin/review">Dashboard</Link>
                     </li><br/>
                      {
                        user?.email ? 
-                     
-                    //  <Link>LogOut</Link>
                     <button onClick={logOut} className='text-nav bg-log'>LogOut</button>
               
                        :
@@ -45,15 +39,6 @@ const Nav = () => {
                      <Link className='text-nav bg-log' to="/login">Login</Link>
                      </li>
                      }
-                     
-                   {/* {
-                     user?.email ?
-                     <Link class='text-nav bg-log' onClick={logOut}>LogOut</Link>
-                     :
-                     <li class="nav-item">
-                     <Link class='text-nav bg-log' to="/login">Login</Link>
-                     </li>
-                   } */}
                 </ul>
           </div>
         </div>

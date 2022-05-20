@@ -71,7 +71,7 @@ const Register = () => {
                   <div className='text-center my-5'> ______________ Or ______________</div>
               </div>
                    {/* login-icon */}
-              <div>
+              <div className='mb-2'>
                     <button className='btn-google my-5'>
                         <div className="double-edit">
                             <div><img className='icon' src={icon} alt="" /></div>

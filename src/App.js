@@ -19,6 +19,7 @@ import Review from './pages/Review/Review';
 import OrderList from './pages/OrderList/OrderList';
 import AuthProvider from './Contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
+import Pay from './pages/Pay/Pay';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path ={"/admin/admin/addService"} element={<PrivateRoute><AddService/></PrivateRoute>}></Route>
           <Route path ={"/admin/admin/makeAdmin"} element={<PrivateRoute><MakeAdmin/></PrivateRoute>}></Route>
           <Route path ={"/admin/admin/list"} element={<PrivateRoute><OrderList/></PrivateRoute>}></Route>
+          <Route path ={"/admin/admin/pay"} element={<PrivateRoute><Pay/></PrivateRoute>}></Route>
        
 
           <Route path ="*" element={<NotFound/>}></Route>

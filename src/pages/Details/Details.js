@@ -6,14 +6,12 @@ import axios from 'axios';
 import useAuth from '../../hooks/useAuth';
 
 const Details = () => {
-    // const { register, handleSubmit } = useForm();
     const {_id} = useParams();
     const [details, setDetails] = useState({});
     const { user } = useAuth();
-    // const [bookingInfo, setBookingInfo] = useState({});
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${_id}`)
+        fetch(`https://morning-lowlands-93777.herokuapp.com/services/${_id}`)
         .then(res => res.json())
         .then(data =>setDetails(data))
     }, [])

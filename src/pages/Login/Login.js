@@ -31,7 +31,7 @@ const Login = () => {
     loginUser(loginData.email, loginData.password, location, navigate);
    e.preventDefault();
   }
-  return <div className='login-page'>
+  return <div className='login-page loging-gap'>
      <Link to="/home"><img className='iconTop my-5' src={iconTop} alt="" /></Link>
         <h2 className='fw-bold'>Login with</h2>
         {/* FORM-ADDED */}

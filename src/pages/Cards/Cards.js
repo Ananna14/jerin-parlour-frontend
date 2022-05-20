@@ -8,7 +8,7 @@ const Cards = () => {
     const [cards, setCards] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://morning-lowlands-93777.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setCards(data))
     },[])
@@ -20,7 +20,7 @@ const Cards = () => {
             {
                 <Row xs={1} md={2} className="g-4">
                     {
-                        cards.map(card =><SingleCard
+                        cards.slice(0,3).map(card =><SingleCard
                             key={card._id}
                             card={card}
                         ></SingleCard>)

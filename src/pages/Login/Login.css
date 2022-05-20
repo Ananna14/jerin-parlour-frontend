@@ -22,21 +22,11 @@
 .login-page{
     background-color:#FFFFFF;;
 }
-/* .google-text{
-    width: 200px;
-    height: 20px;
-    left: 43.96%;
-    right: 42.15%;
-    top: 803px;
-    font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-} */
+
 .double-edit{
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     display: flex;
     padding: 20px;
-
+}
+.loging-gap{
+    margin-bottom: 200px;
 }
