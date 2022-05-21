@@ -45,7 +45,7 @@ function App() {
           <Route path ={"/admin/admin/addService"} element={<PrivateRoute><AddService/></PrivateRoute>}></Route>
           <Route path ={"/admin/admin/makeAdmin"} element={<PrivateRoute><MakeAdmin/></PrivateRoute>}></Route>
           <Route path ={"/admin/admin/list"} element={<PrivateRoute><OrderList/></PrivateRoute>}></Route>
-          <Route path ={"/admin/admin/pay"} element={<PrivateRoute><Pay/></PrivateRoute>}></Route>
+          <Route path ={"/admin/admin/pay/:_id"} element={<PrivateRoute><Pay/></PrivateRoute>}></Route>
        
 
           <Route path ="*" element={<NotFound/>}></Route>

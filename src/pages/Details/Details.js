@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Card } from 'react-bootstrap';
 import '../Details/Details.css'
-import axios from 'axios';
 import useAuth from '../../hooks/useAuth';
 
 const Details = () => {
