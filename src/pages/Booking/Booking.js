@@ -40,29 +40,29 @@ const handleDelete = id =>{
   }
   
     return (
-        <div>
+        <div className="bg-book" style={{paddingBottom: 410}}>
             <Admin/>
-           <main className='bg-book'>
-           <marquee><h1 className="my-5 pink-color">WELCOME BOOKING LIST PAGE</h1></marquee>
+           <main>
+           <marquee><h1 className="my-5 pink-color">WELCOME BOOKING LIST AND ALSO PAYMENT PAGE</h1></marquee>
            <div className='row'>
            {
-                  bookings.map(booking => <div key={booking._id}  bookings={bookings}  className="col col-lg-4 col-md-4 col-sm-6 col-6">
+                  bookings.map(booking => <div key={booking._id}  bookings={bookings}  className="col-lg-4 col-sm-6 col-12">
                      <>
-                        <Card className='m-4 h-80 margin-card border-radius shadow-lg pb-5'>
+                        <Card className='m-4 margin-card border-radius shadow-lg'>
                             <Card.Img variant="top" className='card-img mt-5' src={booking.img} />
                             <Card.Body><br/>
                             <i className='status-colors'>{booking.email}</i><br/><br/>
                             <Card.Title className="fw-bold">{booking.serviceName}</Card.Title>
                             <Card.Text className="fw-bold">
-                                {booking.price}
+                                ${booking.price}
                             </Card.Text>
                             <Card.Text>
                                 {booking.Description}
                             </Card.Text>
-                            <p className="status-colors">{booking.status}</p>
+                            {/* <p className="status-colors">{booking.status}</p> */}
                             <button className="btn-color" onClick={() => handleDelete(booking._id)}>Delete</button>
                             </Card.Body>
-                           <Link to={`/admin/admin/pay/${booking._id}`}><button className='btn'>Pay</button></Link>
+                            <Link to={`/admin/admin/pay/${booking._id}`}><button className='btn-color px-5 mb-5'>Pay</button></Link>
                         </Card>
                </>
                   </div>)

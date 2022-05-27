@@ -4,9 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Card, Col } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
-import './Testmonial.css'
+import useAuth from '../../hooks/useAuth';
+import Rating from '../Review/Rating/Rating';
+import blankImg from '../../../src/Image_Icon/blank-profile.png'
 
 const Testimonial = () => {
+  const{user} = useAuth();
   const [reviews, setReviews]  = useState([]);
 
   useEffect(() => {
@@ -14,7 +17,7 @@ const Testimonial = () => {
             .then(res => res.json())
             .then( data => setReviews(data))
         }, []);
-        console.log(reviews);
+        // console.log(reviews);
 
   const settings = {
     dots: true,
@@ -56,16 +59,23 @@ const Testimonial = () => {
    
   };
   return (
-    <div className='bg-card'>
+    <div className='bg-card pb-5'>
       <div className="container">
           <h2 className='p-5'> Tastimonial </h2>
           <Slider {...settings}>
             {
               reviews.map(review => <div review={review} key={review._id}>
+                
                                   <Card className='shadow m-4 h-100 mb-5'>
-                                  <Card.Img variant="top" className='card-img mb-5' src={review.img} />
+                                  <Card.Img variant="top" className='card-img rounded-circle my-3' src={user.photoURL || blankImg} style={{ height: 60, width: 60 }} alt="" />
                                   <Card.Body>
                                   <Card.Title className="fw-bold">{review.firstName}</Card.Title>
+                                  <Card.Text className="fw-bold">
+                                      {user.email}
+                                  </Card.Text>
+                                  <Card.Text className="fw-bold">
+                                  {/* <Rating value={parseInt(review.rating)} readOnly /> */}
+                                  </Card.Text>
                                   <Card.Text className="fw-bold">
                                       {review.Description}
                                   </Card.Text>

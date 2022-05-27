@@ -15,7 +15,7 @@ const HomePartOne = () => {
                         <span class="visually-hidden">Loading...</span>
                         </div>}
          <Nav/>
-            <div className="container">
+            <div className="part-bg">
                 <div className='d-flex p-5'>
                    {/* part-1 */}
                   <div className="row full-bg">

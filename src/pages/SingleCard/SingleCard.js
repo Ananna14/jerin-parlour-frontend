@@ -2,7 +2,6 @@
 import React from 'react'
 import { Card, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
-import Booking from '../Booking/Booking';
 import './SingleCard.css'
 
 const SingleCard = ({card}) => {
@@ -16,7 +15,7 @@ const SingleCard = ({card}) => {
                             <Card.Body>
                             <Card.Title className="fw-bold">{Title}</Card.Title>
                             <Card.Text className="fw-bold">
-                                {price}
+                                ${price}
                             </Card.Text>
                             <Card.Text>
                                 {Description}

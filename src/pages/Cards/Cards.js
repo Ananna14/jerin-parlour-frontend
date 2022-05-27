@@ -20,7 +20,7 @@ const Cards = () => {
             {
                 <Row xs={1} md={2} className="g-4">
                     {
-                        cards.slice(0,3).map(card =><SingleCard
+                        cards.map(card =><SingleCard
                             key={card._id}
                             card={card}
                         ></SingleCard>)

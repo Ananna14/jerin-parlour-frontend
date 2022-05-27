@@ -15,18 +15,26 @@ fetch(`http://localhost:5000/booking/${_id}`)
 .then(res => res.json())
 .then(data => setPay(data))
   },[_id])
-  console.log(pay);
+  // console.log(pay);
+
   return (
-    <div className='bg-book'>
+    <div className="bg-book" style={{paddingBottom: 200}}>
       <Admin/>
      <main>
-      <h4 className='p-3 fw-bold'>Please Pay for: {pay.serviceName}</h4>
-        <h5>Pay: {pay.price}</h5>
-        <Elements stripe={stripePromise}>
-        <CheckoutForm 
-          pay={pay}
-        />
-      </Elements>
+        <div class="container shadow-lg" style={{ maxWidth: 580, marginTop: 100, padding: 50, backgroundColor: "white" }}>
+            <div class="row">
+              <div class="col">
+              <h4 className='p-3 fw-bold'>Please Pay for: {pay.serviceName}</h4>
+                <h5>Pay: ${pay.price}</h5>
+
+                {pay?.price && <Elements stripe={stripePromise}>
+                <CheckoutForm 
+                  pay={pay}
+                />
+              </Elements>}
+              </div>
+            </div>
+        </div>
      </main>
     </div>
   )

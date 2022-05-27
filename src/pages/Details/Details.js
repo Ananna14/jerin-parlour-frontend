@@ -22,7 +22,7 @@ const Details = () => {
             name: user.displayName,
             email: user.email,
             img: details.img,
-            status: 'Pending',
+            // status: 'Pending',
             serviceName: details.Title,
             Description: details.Description,
             price: details.price
@@ -48,15 +48,15 @@ const Details = () => {
     };
 
     return (
-        <div>
-            <>
+        <div className="details-color">
+            {/* <> */}
                 <div className='col-lg-4 col-md-6 col-12' >
-                        <Card className='shadow m-4 h-100 mt-5 card-center'>
+                        <Card className='shadow-lg m-4 h-100 card-center'>
                             <Card.Img variant="top" className='card-img mt-5' src={details.img} />
                             <Card.Body>
                             <Card.Title className="fw-bold">{details.Title}</Card.Title>
                             <Card.Text className="fw-bold">
-                                {details.price}
+                                ${details.price}
                             </Card.Text>
                             <Card.Text>
                                 {details.Description}
@@ -67,12 +67,9 @@ const Details = () => {
                         </Card>
                        <Link to="/home"><button className="back-btn">Back</button></Link>
                 </div>
-                {/* form-add */}
-                <div>
-
-                </div>
-            </>
+            <div>
         </div>
+    </div>
     )
 }
 

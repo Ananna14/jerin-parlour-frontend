@@ -8,7 +8,7 @@ import useAuth from '../../hooks/useAuth';
 const Nav = () => {
   const {user, logOut} = useAuth();
     return (
- <div>
+ <div className='part-bg'>
      <nav className="navbar navbar-expand-lg navbar-light full-bg my-lg-0 dashbord">
         <div className="container-fluid col-12">
           <div className="">

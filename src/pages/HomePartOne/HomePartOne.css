@@ -3,6 +3,9 @@
     height: 478px;
     margin-left: 100px;
 }
+.part-bg{
+    background-color:  #FFF8F5;
+}
 
 body{
     font-family: 'Kanit', sans-serif;

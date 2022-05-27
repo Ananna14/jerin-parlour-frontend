@@ -5,10 +5,10 @@ import './HomeThird.css'
 const HomeThird = () => {
     return (
     <>
-        <div className="container">
-                <div className='d-flex'>
+        <div className="part-bg">
+                <div className='d-flex container'>
                     {/* part-1 */}
-                   <div className="row full-bg padding-banner">
+                   <div className="row padding-banner">
                         <div className='col-lg-6'>
                             <img src={second} className='img-fluid' alt="" />
                         </div>

@@ -3,8 +3,8 @@ import { FloatingLabel, Form } from 'react-bootstrap';
 import Footer from '../Footer/Footer';
 
 const HomeForm = () => {
-  return <div className="full-bg">
-               <h2 className="mt-5 fw-bold">Let us handle your<br/> project, professionally.</h2>
+  return <div className="part-bg">
+               <h2 className="fw-bold pt-5">Let us handle your<br/> project, professionally.</h2>
               <div className="container mt-5">
                        <div className="row">
                           <div className="col col-lg-6 col-12">
