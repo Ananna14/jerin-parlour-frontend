@@ -48,7 +48,7 @@ const handleDelete = id =>{
            {
                   bookings.map(booking => <div key={booking._id}  bookings={bookings}  className="col-lg-4 col-sm-6 col-12">
                      <>
-                        <Card className='m-4 margin-card border-radius shadow-lg'>
+                        <Card className='m-4 margin-card border-radius shadow-lg' style={{justifyContent: "center", alignItems: "center"}}>
                             <Card.Img variant="top" className='card-img mt-5' src={booking.img} />
                             <Card.Body><br/>
                             <i className='status-colors'>{booking.email}</i><br/><br/>

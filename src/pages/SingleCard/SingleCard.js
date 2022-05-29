@@ -10,7 +10,7 @@ const SingleCard = ({card}) => {
              <>
                 <div className='col-lg-4 col-md-6 col-12'>
                   <Link to={`/details/${_id}`} style={{color:"black", textDecoration:"none"}}>
-                        <Card className='shadow m-4 h-100'>
+                        <Card className='shadow m-4 h-100' style={{justifyContent: "center", alignItems: "center"}}>
                             <Card.Img variant="top" className='card-img mt-5' src={img} />
                             <Card.Body>
                             <Card.Title className="fw-bold">{Title}</Card.Title>

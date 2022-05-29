@@ -5,8 +5,9 @@ import Slider from "react-slick";
 import { Card, Col } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-import Rating from '../Review/Rating/Rating';
 import blankImg from '../../../src/Image_Icon/blank-profile.png'
+import Rating from '../Review/Rating/Rating';
+import { FaStar } from 'react-icons/fa';
 
 const Testimonial = () => {
   const{user} = useAuth();
@@ -58,6 +59,7 @@ const Testimonial = () => {
   ]
    
   };
+  console.log(reviews)
   return (
     <div className='bg-card pb-5'>
       <div className="container">
@@ -66,16 +68,31 @@ const Testimonial = () => {
             {
               reviews.map(review => <div review={review} key={review._id}>
                 
-                                  <Card className='shadow m-4 h-100 mb-5'>
+                                  <Card className='shadow m-4 h-100 mb-5' style={{justifyContent: "center", alignItems: "center"}}>
                                   <Card.Img variant="top" className='card-img rounded-circle my-3' src={user.photoURL || blankImg} style={{ height: 60, width: 60 }} alt="" />
                                   <Card.Body>
                                   <Card.Title className="fw-bold">{review.firstName}</Card.Title>
                                   <Card.Text className="fw-bold">
                                       {user.email}
                                   </Card.Text>
-                                  <Card.Text className="fw-bold">
-                                  {/* <Rating value={parseInt(review.rating)} readOnly /> */}
-                                  </Card.Text>
+                                {
+                                  review.rating && <div>
+                                    {[...Array(5)].map((star, i)=>{
+                                    const ratingValue = i + 1;
+                                    return (
+                                        <label>
+                                            <input type="radio" name="rating" value={review.rating}
+                                          readOnly
+                                          
+                                            />
+                          <FaStar color={ratingValue <= review.rating ? "#ffc107" : "#e4e5e9"} className="star" size={50}  />
+                </label>
+               
+            );
+        })}
+                                  </div>
+                                }
+                                     {/* <Rating value={parseInt(review.rating)} readOnly /> */}
                                   <Card.Text className="fw-bold">
                                       {review.Description}
                                   </Card.Text>

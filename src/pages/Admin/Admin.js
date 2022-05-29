@@ -34,6 +34,7 @@ const Admin = () => {
                               <Link className="item lh-lg" to={`/admin/admin/booking`}><i className="fa-solid fa-address-book px-3"></i>Booking list</Link><br/><br/>
                               <Link className="item lh-lg" to={`/admin/admin/review`}><i className="fa-solid fa-magnifying-glass px-3"></i>Review</Link><br/><br/>
                               <Link className="item lh-lg" to={`/admin/admin/booking`}><i class="fa-solid fa-clipboard-user px-3"></i>Pay</Link><br/><br/>
+                              <Link className="item lh-lg" to={`/admin/admin/book`}><i className="fa-solid fa-plus px-3"></i>Book</Link><br/><br/>
                               {/* <Link className="item lh-lg" to={`/admin/admin/addService`}><i className="fa-solid fa-plus px-3"></i>Add Service</Link><br/><br/> */}
                               {/* <Link className="item lh-lg" to={`/admin/admin/makeAdmin`}><i className="fa-solid fa-users-line px-3"></i>Make Admin</Link><br/> */}
                               {/* <Link className="item lh-lg" to={`/admin/admin/list`}><i className="fa-regular fa-camera-retro px-3"></i>Order list</Link><br/> */}
