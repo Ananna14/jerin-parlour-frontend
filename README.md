@@ -1,10 +1,13 @@
+## Technologies:
+react, node, express, mongodb, firebase, bootstrap
+
 ## Live Site
 https://silly-eclair-9ad9ba.netlify.app/
 
 ## About this project
 •	This is a jerin parlour buying website.
 
-•	Their are two type of users (general customer and admin).
+•	Their are one type of users (general customer).
 
 •	User can registration and login to this site
 
@@ -12,8 +15,20 @@ https://silly-eclair-9ad9ba.netlify.app/
 
 •	using can also cancel their order.
 
-•	Admin can approve to shipment and also cancel order.
-
-•	Admin can add new product.
+•	user can also payment their order.
 
 •	This website is mobile responsive.
+
+## dependencies
+
+• bootstrap.
+
+• react-bootstrap
+
+• react-router-dom V6
+
+• firebase
+
+• react-hook-form
+
+• stripe
