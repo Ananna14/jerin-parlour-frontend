@@ -59,7 +59,7 @@ const Testimonial = () => {
   ]
    
   };
-  console.log(reviews)
+  // console.log(reviews)
   return (
     <div className='bg-card pb-5'>
       <div className="container">

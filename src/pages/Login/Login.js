@@ -21,7 +21,7 @@ const Login = () => {
   // console.log(field, value)
   const newLoginData = {...loginData};
   newLoginData[field] = value;
-  console.log(newLoginData)
+  // console.log(newLoginData)
   setLoginData(newLoginData);
   }
 
