@@ -22,8 +22,13 @@ https://silly-eclair-9ad9ba.netlify.app/
 ## dependencies
 
 • bootstrap.
+
 • react-bootstrap
+
 • react-router-dom V6
+
 • firebase
+
 • react-hook-form
+
 • stripe
