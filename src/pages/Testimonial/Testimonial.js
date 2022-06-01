@@ -72,27 +72,21 @@ const Testimonial = () => {
                                   <Card.Img variant="top" className='card-img rounded-circle my-3' src={user.photoURL || blankImg} style={{ height: 60, width: 60 }} alt="" />
                                   <Card.Body>
                                   <Card.Title className="fw-bold">{review.firstName}</Card.Title>
-                                  <Card.Text className="fw-bold">
-                                      {user.email}
-                                  </Card.Text>
+                                  {/* Rating */}
                                 {
                                   review.rating && <div>
                                     {[...Array(5)].map((star, i)=>{
                                     const ratingValue = i + 1;
                                     return (
-                                        <label>
-                                            <input type="radio" name="rating" value={review.rating}
-                                          readOnly
-                                          
-                                            />
-                          <FaStar color={ratingValue <= review.rating ? "#ffc107" : "#e4e5e9"} className="star" size={50}  />
-                </label>
+                                    <label>
+                                      <input type="radio" name="rating" value={review.rating} readOnly />
+                                          <FaStar color={ratingValue <= review.rating ? "#ffc107" : "#e4e5e9"} className="star" size={50}  />
+                                    </label>
                
-            );
-        })}
+                                      );
+                                  })}
                                   </div>
                                 }
-                                     {/* <Rating value={parseInt(review.rating)} readOnly /> */}
                                   <Card.Text className="fw-bold">
                                       {review.Description}
                                   </Card.Text>

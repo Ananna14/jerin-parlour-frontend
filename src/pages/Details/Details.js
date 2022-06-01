@@ -50,8 +50,8 @@ const Details = () => {
     return (
         <div className="details-color">
             {/* <> */}
-                <div className='col-lg-4 col-md-6 col-12' >
-                        <Card className='shadow-lg m-4 h-100 card-center'>
+                <div className='col-lg-4 col-md-6 col-12'>
+                        <Card className='shadow-lg m-4 h-100 card-center' style={{justifyContent: "center", alignItems: "center"}}>
                             <Card.Img variant="top" className='card-img mt-5' src={details.img} />
                             <Card.Body>
                             <Card.Title className="fw-bold">{details.Title}</Card.Title>

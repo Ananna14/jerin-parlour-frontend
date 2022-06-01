@@ -42,12 +42,6 @@ const Login = () => {
                 {isLoading && <div class="spinner-border text-danger" role="status">
                         <span class="visually-hidden">Loading...</span>
                         </div>}
-                    {user?.email && <div class="alert alert-success" role="alert">
-                           User Login Successfully!
-                            </div>}
-                            {authError && <div class="alert alert-danger" role="alert">
-                            {authError}
-                            </div>}
                             <div class="mb-3">
                                <input type="email" class="form-control" name="email" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="name@example.com"/>
                             </div>
@@ -55,8 +49,13 @@ const Login = () => {
                                 <input type="password" class="form-control" name="password" onChange={handleOnChange} id="inputPassword2" placeholder="Password"/>
                             </div>
                     <button type="submit" className='bg p-2 px-3 mb-5'>Login</button>
-                   
                 </form>
+                {user?.email && <div class="alert alert-success" role="alert">
+                           User Login Successfully!
+                            </div>}
+                            {authError && <div class="alert alert-danger" role="alert">
+                            {authError}
+                            </div>}
                 
               </div>
              
