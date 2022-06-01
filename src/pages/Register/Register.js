@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import icon from '../../Image_Icon/Icon/Group 573.png'
 import { useState } from 'react';
 import './Register.css'
@@ -8,9 +8,11 @@ import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
-   
+    const { user, registerUser, isLoading, authError, signInWithGoogle } = useAuth();
 
-    const { user, registerUser, isLoading, authError } = useAuth()
+     // redirect
+  const location = useLocation();
+  const navigate = useNavigate();
 
     const handleOnChange = e =>{
         const field = e.target.name;
@@ -34,7 +36,7 @@ const Register = () => {
     
   return <div className='register-design'>
                  {/* form */}
-              <div className="container contact-form mt-5">
+              <div className="container contact-form py-5">
                 <div className='row border'>
                     <h3 className='fw-bold text-sm-start my-5'>Create an account</h3>
                          <form onSubmit={handleOnSubmit}>
@@ -75,7 +77,7 @@ const Register = () => {
                     <button className='btn-google my-5'>
                         <div className="double-edit">
                             <div><img className='icon' src={icon} alt="" /></div>
-                            <div className='mx-5'>Continue with google</div>
+                            <div className='mx-5'  onClick={() => signInWithGoogle(location, navigate)}>Continue with google</div>
                         </div>
                         
                     </button> 

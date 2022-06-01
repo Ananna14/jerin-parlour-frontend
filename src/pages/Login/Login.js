@@ -8,7 +8,7 @@ import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
-  const {user, loginUser, isLoading, authError} = useAuth();
+  const {user, loginUser, isLoading, authError, signInWithGoogle} = useAuth();
 
   // redirect
   const location = useLocation();
@@ -31,7 +31,7 @@ const Login = () => {
     loginUser(loginData.email, loginData.password, location, navigate);
    e.preventDefault();
   }
-  return <div className='login-page loging-gap'>
+  return <div className='login-page py-5'>
      <Link to="/home"><img className='iconTop my-5' src={iconTop} alt="" /></Link>
         <h2 className='fw-bold'>Login with</h2>
         {/* FORM-ADDED */}
@@ -66,7 +66,7 @@ const Login = () => {
           <button className='btn-google my-5'>
             <div className="double-edit">
               <div><img className='icon' src={icon} alt="" /></div>
-              <div className='mx-5'>Continue with google</div>
+              <div className='mx-5' onClick={() => signInWithGoogle(location, navigate)}>Continue with google</div>
                 
             </div>
             
