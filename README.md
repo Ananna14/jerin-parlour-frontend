@@ -1,3 +1,6 @@
+## Technologies:
+react, node, express, mongodb, firebase, bootstrap
+
 ## Live Site
 https://silly-eclair-9ad9ba.netlify.app/
 
@@ -15,3 +18,12 @@ https://silly-eclair-9ad9ba.netlify.app/
 •	user can also payment their order.
 
 •	This website is mobile responsive.
+
+## dependencies
+
+• bootstrap.
+• react-bootstrap
+• react-router-dom V6
+• firebase
+• react-hook-form
+• stripe
