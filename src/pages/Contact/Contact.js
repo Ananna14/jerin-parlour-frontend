@@ -1,6 +1,5 @@
 import React from 'react'
-import { Button, FloatingLabel, Form } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
+import { FloatingLabel, Form } from 'react-bootstrap';
 import cover from '../../contact-icon/Contact us_topbanner_cropped.jpg'
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';

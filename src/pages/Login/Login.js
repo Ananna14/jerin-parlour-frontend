@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import icon from '../../Image_Icon/Icon/Group 573.png'
 import iconTop from '../../Image_Icon/Group 33092.png'
 import './Login.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
