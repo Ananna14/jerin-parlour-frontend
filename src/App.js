@@ -29,7 +29,7 @@ function App() {
           <Route path="/" element={<HomePartOne/>}></Route>
           <Route path="/home" element={<HomePartOne/>}></Route>
           <Route path ="/cards" element={<Cards/>}></Route>
-          <Route path ="/details/:_id" element={<Details/>}></Route>
+          <Route path ="/details/:_id" element={<PrivateRoute><Details/></PrivateRoute>}></Route>
           <Route path ="/contact" element={<Contact/>}></Route>
           <Route path ="/login" element={<Login/>}></Route>
           <Route path ="/register" element={<Register/>}></Route>
