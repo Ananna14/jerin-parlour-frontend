@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import Admin from '../Admin/Admin'
+
 import { Card } from "react-bootstrap";
-import Admin from '../Admin/Admin';
-import './Booking.css'
+// import './Booking.css'
 import useAuth from '../../hooks/useAuth';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-const Booking = () => {
+
+const Payment = () => {
     const {_id} = useParams();
     const { user } = useAuth();
     const [bookings, setBookings] = useState([]);
@@ -38,11 +40,10 @@ const handleDelete = id =>{
     
     })
   }
-  
-    return (
-        <div className="bg-book" style={{paddingBottom: 410}}>
-            <Admin/>
-           <main>
+  return (
+    <div>
+        <Admin/>
+        <main>
            <marquee><h1 className="my-5 pink-color">WELCOME BOOKING LIST AND ALSO PAYMENT PAGE</h1></marquee>
            <div className='row'>
            {
@@ -60,17 +61,17 @@ const handleDelete = id =>{
                                 {booking.Description}
                             </Card.Text>
                             {/* <p className="status-colors">{booking.status}</p> */}
-                            <button className="btn-color" onClick={() => handleDelete(booking._id)}>Delete</button>
+                            {/* <button className="btn-color" onClick={() => handleDelete(booking._id)}>Delete</button> */}
                             </Card.Body>
-                            {/* <Link to={`/admin/admin/pay/${booking._id}`}><button className='btn-color px-5 mb-5'>Pay</button></Link> */}
+                            <Link to={`/admin/admin/pay/${booking._id}`}><button className='btn-color px-5 mb-5'>Pay</button></Link>
                         </Card>
                </>
                   </div>)
 }
            </div>
-           </main>        
-        </div>
-    )
+           </main>  
+    </div>
+  )
 }
 
-export default Booking
+export default Payment

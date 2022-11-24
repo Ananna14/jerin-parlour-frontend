@@ -16,6 +16,7 @@ import AuthProvider from './Contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Pay from './pages/Pay/Pay';
 import Book from './pages/Book/Book';
+import Payment from './pages/Pay/Payment';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path ="/admin" element={<PrivateRoute><Admin/></PrivateRoute>}></Route>
           <Route path ={`/admin/admin/booking`} element={<PrivateRoute><Booking/></PrivateRoute>}></Route>
           <Route path ={`/admin/admin/book`} element={<PrivateRoute><Book/></PrivateRoute>}></Route>
+          <Route path ={`/admin/admin/payment`} element={<PrivateRoute><Payment/></PrivateRoute>}></Route>
           <Route path ={`/admin/admin/review`} element={<PrivateRoute><Review/></PrivateRoute>}></Route>
           <Route path ={"/admin/admin/addService"} element={<PrivateRoute><AddService/></PrivateRoute>}></Route>
           <Route path ={"/admin/admin/pay/:_id"} element={<PrivateRoute><Pay/></PrivateRoute>}></Route>

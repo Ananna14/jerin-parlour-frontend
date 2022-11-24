@@ -61,7 +61,7 @@ const Login = () => {
             </div>
 
       {/* img-added */}
-       <div>
+       {/* <div>
           <button className='btn-google my-5'>
             <div className="double-edit">
               <div><img className='icon' src={icon} alt="" /></div>
@@ -70,7 +70,7 @@ const Login = () => {
             </div>
             
           </button> 
-        </div>
+        </div> */}
          <h6 className=''>Already have an account? <Link to="/register" className="pink-color">create an account</Link></h6> 
   </div>;
 };
