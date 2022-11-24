@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import icon from '../../Image_Icon/Icon/Group 573.png'
+import iconTop from '../../Image_Icon/Group 33092.png'
 import { useState } from 'react';
 import './Register.css'
 import useAuth from '../../hooks/useAuth';
@@ -37,6 +37,7 @@ const Register = () => {
                  {/* form */}
               <div className="container contact-form py-5">
                 <div className='row border'>
+                <Link to="/home"><img className='iconTop my-5' src={iconTop} alt="" /></Link>
                     <h3 className='fw-bold text-sm-start my-5'>Create an account</h3>
                          <form onSubmit={handleOnSubmit}>
                             <div class="mb-3">
@@ -69,10 +70,10 @@ const Register = () => {
                         <h6>Already have an account? <Link to="/login" className="pink-color">Login</Link></h6>               
                     </div>
                    {/* OR */}
-                  <div className='text-center my-5'> ______________ Or ______________</div>
+                  {/* <div className='text-center my-5'> ______________ Or ______________</div> */}
               </div>
                    {/* login-icon */}
-              <div className='mb-2'>
+              {/* <div className='mb-2'>
                     <button className='btn-google my-5'>
                         <div className="double-edit">
                             <div><img className='icon' src={icon} alt="" /></div>
@@ -80,7 +81,7 @@ const Register = () => {
                         </div>
                         
                     </button> 
-                </div>
+                </div> */}
             </div>;
 };
 
