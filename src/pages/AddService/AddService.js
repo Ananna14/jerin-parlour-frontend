@@ -9,7 +9,7 @@ const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://morning-lowlands-93777.herokuapp.com/services', data)
+        axios.post('https://jerin-server.vercel.app/services', data)
         .then(res =>{
             reset();
             alert('Successfully Submit');

@@ -12,7 +12,7 @@ const Review = () => {
     const onSubmit = data => {
         // console.log(data);
         const review =  {...data, rating}
-        axios.post('https://morning-lowlands-93777.herokuapp.com/review', review)
+        axios.post('https://jerin-server.vercel.app/review', review)
         .then(res => {
           // console.log(res);
           if(res.data.insertedId) {

@@ -10,7 +10,7 @@ const Details = () => {
     const { user } = useAuth();
 
     useEffect(()=>{
-        fetch(`https://morning-lowlands-93777.herokuapp.com/services/${_id}`)
+        fetch(`https://jerin-server.vercel.app/services/${_id}`)
         .then(res => res.json())
         .then(data =>setDetails(data))
     }, [])
@@ -29,7 +29,7 @@ const Details = () => {
         }
         // console.log(orderDetails);
         // SEND_TO_THE_SERVER
-        fetch(`http://localhost:5000/booking`, {
+        fetch(`https://jerin-server.vercel.app/booking`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

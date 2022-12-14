@@ -15,7 +15,7 @@ const Payment = () => {
 
     // SINGLE_USER_SERVICE_LOAD
     useEffect( ()=>{
-        const url = `https://morning-lowlands-93777.herokuapp.com/booking?email=${user.email}`
+        const url = `https://jerin-server.vercel.app/booking?email=${user.email}`
         fetch(url)
         .then(res => res.json())
         .then(data => setBookings(data));
@@ -25,7 +25,7 @@ const Payment = () => {
 
 // BTN_DELETED_USER_SERVICE
 const handleDelete = id =>{
-    const url = `https://morning-lowlands-93777.herokuapp.com/services/${id}`
+    const url = `https://jerin-server.vercel.app/services/${id}`
     fetch(url, {
       method: 'DELETE'
     })

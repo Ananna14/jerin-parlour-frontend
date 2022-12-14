@@ -11,7 +11,7 @@ const Pay = () => {
   const {_id } = useParams();
   const [pay, setPay] = useState({});
   useEffect(()=>{
-fetch(`http://localhost:5000/booking/${_id}`)
+fetch(`https://jerin-server.vercel.app/booking/${_id}`)
 .then(res => res.json())
 .then(data => setPay(data))
   },[_id])

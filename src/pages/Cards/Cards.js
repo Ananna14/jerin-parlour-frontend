@@ -8,7 +8,7 @@ const Cards = () => {
     const [cards, setCards] = useState([])
 
     useEffect(()=>{
-        fetch('https://morning-lowlands-93777.herokuapp.com/services')
+        fetch('https://jerin-server.vercel.app/services')
         .then(res => res.json())
         .then(data => setCards(data))
     },[])

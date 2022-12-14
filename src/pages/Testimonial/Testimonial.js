@@ -14,7 +14,7 @@ const Testimonial = () => {
   const [reviews, setReviews]  = useState([]);
 
   useEffect(() => {
-            fetch(`https://morning-lowlands-93777.herokuapp.com/review`)
+            fetch(`https://jerin-server.vercel.app/review`)
             .then(res => res.json())
             .then( data => setReviews(data))
         }, []);

@@ -16,7 +16,7 @@ const CheckoutForm = ({ pay }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect(()=>{
-      fetch('http://localhost:5000/create-payment-intent',{
+      fetch('https://jerin-server.vercel.app/create-payment-intent',{
         method: 'POST',
         headers: {
           'content-type': 'application/json'
@@ -83,7 +83,7 @@ const CheckoutForm = ({ pay }) => {
           transaction: paymentIntent.client_secret.slice('_secret')[0]
 
         }
-        const url = `http://localhost:5000/booking/${_id}`;
+        const url = `https://jerin-server.vercel.app/booking/${_id}`;
         fetch(url, {
           method: 'PUT',
           headers: {
