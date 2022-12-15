@@ -13,7 +13,7 @@ const Booking = () => {
 
     // SINGLE_USER_SERVICE_LOAD
     useEffect( ()=>{
-        const url = `https://jerin-server.vercel.app/booking?email=${user.email}`
+        const url = `${process.env.REACT_APP_URL}/booking?email=${user.email}`
         fetch(url)
         .then(res => res.json())
         .then(data => setBookings(data));
@@ -23,7 +23,7 @@ const Booking = () => {
 
 // BTN_DELETED_USER_SERVICE
 const handleDelete = id =>{
-    const url = `https://jerin-server.vercel.app/services/${id}`
+    const url = `${process.env.REACT_APP_URL}/services/${id}`
     fetch(url, {
       method: 'DELETE'
     })
@@ -59,10 +59,10 @@ const handleDelete = id =>{
                             <Card.Text>
                                 {booking.Description}
                             </Card.Text>
-                            {/* <p className="status-colors">{booking.status}</p> */}
+                        
                             <button className="btn-color" onClick={() => handleDelete(booking._id)}>Delete</button>
                             </Card.Body>
-                            {/* <Link to={`/admin/admin/pay/${booking._id}`}><button className='btn-color px-5 mb-5'>Pay</button></Link> */}
+                           
                         </Card>
                </>
                   </div>)

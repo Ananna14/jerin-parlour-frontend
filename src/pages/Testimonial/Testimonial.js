@@ -14,9 +14,11 @@ const Testimonial = () => {
   const [reviews, setReviews]  = useState([]);
 
   useEffect(() => {
-            fetch(`https://jerin-server.vercel.app/review`)
+            fetch(`${process.env.REACT_APP_URL}/review`)
             .then(res => res.json())
-            .then( data => setReviews(data))
+            .then( data => {
+              setReviews(data.data)
+            })
         }, []);
         // console.log(reviews);
 

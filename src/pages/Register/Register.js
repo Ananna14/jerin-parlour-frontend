@@ -58,13 +58,13 @@ const Register = () => {
                            
                               <button type="submit" className='bg p-2 px-3 mb-5'>Create an account</button>
                          </form>
-                         {isLoading && <div class="spinner-border text-danger" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                         {isLoading && <div className="spinner-border text-danger" role="status">
+                        <span className="visually-hidden">Loading...</span>
                         </div>}
-                         {user?.email && <div class="alert alert-success" role="alert">
+                         {user?.email && <div className="alert alert-success" role="alert">
                            User Created Successfully!
                             </div>}
-                            {authError && <div class="alert alert-danger" role="alert">
+                            {authError && <div className="alert alert-danger" role="alert">
                             {authError}
                             </div>}
                         <h6>Already have an account? <Link to="/login" className="pink-color">Login</Link></h6>               

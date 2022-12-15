@@ -10,7 +10,7 @@ const Details = () => {
     const { user } = useAuth();
 
     useEffect(()=>{
-        fetch(`https://jerin-server.vercel.app/services/${_id}`)
+        fetch(`${process.env.REACT_APP_URL}/services/${_id}`)
         .then(res => res.json())
         .then(data =>setDetails(data))
     }, [])
@@ -29,7 +29,7 @@ const Details = () => {
         }
         // console.log(orderDetails);
         // SEND_TO_THE_SERVER
-        fetch(`https://jerin-server.vercel.app/booking`, {
+        fetch(`${process.env.REACT_APP_URL}/booking`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

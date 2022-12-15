@@ -9,7 +9,7 @@ const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://jerin-server.vercel.app/services', data)
+        axios.post(`${process.env.REACT_APP_URL}/services`, data)
         .then(res =>{
             reset();
             alert('Successfully Submit');
