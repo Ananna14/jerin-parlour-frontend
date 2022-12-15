@@ -8,9 +8,12 @@ const Cards = () => {
     const [cards, setCards] = useState([])
 
     useEffect(()=>{
-        fetch('https://jerin-server.vercel.app/services')
+        fetch(`${process.env.REACT_APP_URL}/services`)
         .then(res => res.json())
-        .then(data => setCards(data))
+        .then(data => {
+            setCards(data.data)
+        })
+        
     },[])
     return (
      <div className='bg-card'>
