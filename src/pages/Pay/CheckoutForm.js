@@ -114,8 +114,8 @@ const CheckoutForm = ({ pay }) => {
           },
         }}
       />
-       { processing ? <div class="spinner-border" role="status">
-       <span class="visually-hidden">Loading...</span>
+       { processing ? <div className="spinner-border" role="status">
+       <span className="visually-hidden">Loading...</span>
        </div> :<button type="submit" disabled={!stripe || success}> Pay ${price} </button>}
     </form>
     {

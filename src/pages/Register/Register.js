@@ -40,20 +40,20 @@ const Register = () => {
                 <Link to="/home"><img className='iconTop my-5' src={iconTop} alt="" /></Link>
                     <h3 className='fw-bold text-sm-start my-5'>Create an account</h3>
                          <form onSubmit={handleOnSubmit}>
-                            <div class="mb-3">
-                               <input type="text" class="form-control" name="First Name" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="First Name"/>
+                            <div className="mb-3">
+                               <input type="text" className="form-control" name="First Name" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="First Name"/>
                             </div>
-                            <div class="mb-3">
-                               <input type="text" class="form-control" name="Last Name" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="Last Name"/>
+                            <div className="mb-3">
+                               <input type="text" className="form-control" name="Last Name" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="Last Name"/>
                             </div>
-                            <div class="mb-3">
-                               <input type="email" class="form-control" name="email" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="name@example.com"/>
+                            <div className="mb-3">
+                               <input type="email" className="form-control" name="email" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="name@example.com"/>
                             </div>
-                            <div class="col-auto mb-3">
-                                <input type="password" class="form-control" name="password" onChange={handleOnChange} id="inputPassword2" placeholder="Password"/>
+                            <div className="col-auto mb-3">
+                                <input type="password" className="form-control" name="password" onChange={handleOnChange} id="inputPassword2" placeholder="Password"/>
                             </div>
-                            <div class="col-auto mb-3">
-                                <input type="confirm-password" class="form-control" name="password2" onChange={handleOnChange} id="inputPassword2" placeholder="Confirm-Password"/>
+                            <div className="col-auto mb-3">
+                                <input type="confirm-password" className="form-control" name="password2" onChange={handleOnChange} id="inputPassword2" placeholder="Confirm-Password"/>
                             </div>
                            
                               <button type="submit" className='bg p-2 px-3 mb-5'>Create an account</button>

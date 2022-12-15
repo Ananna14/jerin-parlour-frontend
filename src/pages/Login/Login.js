@@ -37,21 +37,21 @@ const Login = () => {
             <div className='container'>
               <div className="row">
                 <form onSubmit={handleLoginSubmit}>
-                {isLoading && <div class="spinner-border text-danger" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                {isLoading && <div className="spinner-border text-danger" role="status">
+                        <span className="visually-hidden">Loading...</span>
                         </div>}
-                            <div class="mb-3">
-                               <input type="email" class="form-control" name="email" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="name@example.com"/>
+                            <div className="mb-3">
+                               <input type="email" className="form-control" name="email" onChange={handleOnChange} id="exampleFormControlInput1" placeholder="name@example.com"/>
                             </div>
-                            <div class="col-auto mb-3">
-                                <input type="password" class="form-control" name="password" onChange={handleOnChange} id="inputPassword2" placeholder="Password"/>
+                            <div className="col-auto mb-3">
+                                <input type="password" className="form-control" name="password" onChange={handleOnChange} id="inputPassword2" placeholder="Password"/>
                             </div>
                     <button type="submit" className='bg p-2 px-3 mb-5'>Login</button>
                 </form>
-                {user?.email && <div class="alert alert-success" role="alert">
+                {user?.email && <div className="alert alert-success" role="alert">
                            User Login Successfully!
                             </div>}
-                            {authError && <div class="alert alert-danger" role="alert">
+                            {authError && <div className="alert alert-danger" role="alert">
                             {authError}
                             </div>}
                 

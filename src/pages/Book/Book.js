@@ -11,7 +11,7 @@ const Book = () => {
       <h3 className="p-3 fw-bold text-start">Book</h3>
       {/* form */}
       <div>
-      <form class="">
+      <form className="">
          <input type="email" defaultValue={user.email} className="w-50 p-2" name="" id="" placeholder='Email' /><br/><br/>
       </form>
       </div>

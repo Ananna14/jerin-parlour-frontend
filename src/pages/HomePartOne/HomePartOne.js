@@ -11,8 +11,8 @@ const HomePartOne = () => {
     const { isLoading } = useAuth();
     return (
          <>
-          {isLoading && <div class="spinner-border text-danger" role="status">
-                        <span class="visually-hidden">Loading...</span>
+          {isLoading && <div className="spinner-border text-danger" role="status">
+                        <span className="visually-hidden">Loading...</span>
                         </div>}
          <Nav/>
             <div className="part-bg">

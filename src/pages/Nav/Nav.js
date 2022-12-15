@@ -20,7 +20,7 @@ const Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse nav-design" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 card-design">
+                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 card-design">
                     <li className="nav-item">
                     <Link className='text-nav' to="/home">Home</Link>
                     </li>

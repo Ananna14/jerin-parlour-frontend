@@ -21,9 +21,9 @@ fetch(`https://jerin-server.vercel.app/booking/${_id}`)
     <div className="bg-book" style={{paddingBottom: 200}}>
       <Admin/>
      <main>
-        <div class="container shadow-lg" style={{ maxWidth: 580, marginTop: 100, padding: 50, backgroundColor: "white" }}>
-            <div class="row">
-              <div class="col">
+        <div className="container shadow-lg" style={{ maxWidth: 580, marginTop: 100, padding: 50, backgroundColor: "white" }}>
+            <div className="row">
+              <div className="col">
               <h4 className='p-3 fw-bold'>Please Pay for: {pay.serviceName}</h4>
                 <h5>Pay: ${pay.price}</h5>
 

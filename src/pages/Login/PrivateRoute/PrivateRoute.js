@@ -8,8 +8,8 @@ const PrivateRoute = ({ children, ...rest }) => {
     if (isLoading) {
         return (
             <div className="d-flex align-items-center justify-content-center" style={{ height: '80vh' }}>
-                {isLoading && <div class="spinner-border text-danger" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                {isLoading && <div className="spinner-border text-danger" role="status">
+                        <span className="visually-hidden">Loading...</span>
                         </div>}
             </div>
         )
